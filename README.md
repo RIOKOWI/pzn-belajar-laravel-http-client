@@ -91,3 +91,10 @@ contoh di file :
 
 HttpTest.php
 LINE 35-45
+
+## QUERY PARAMETER
+
+contoh di file :
+
+HttpTest.php
+LINE 47-56
