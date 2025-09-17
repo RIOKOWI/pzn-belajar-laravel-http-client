@@ -75,3 +75,12 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 ## HTTP CLIENT
 
 pakai library guzzle
+
+## HTTP METHOD
+
+https://pipedream.com/requestbin
+
+contoh di file :
+
+HttpTest.php
+LINE 14-33
