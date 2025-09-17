@@ -84,3 +84,10 @@ contoh di file :
 
 HttpTest.php
 LINE 14-33
+
+## RESPONSE
+
+contoh di file :
+
+HttpTest.php
+LINE 35-45
