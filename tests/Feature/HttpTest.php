@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Http;
 use function PHPUnit\Framework\assertTrue;
 
 use Illuminate\Foundation\Testing\WithFaker;
+use Illuminate\Http\Client\RequestException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 
 class HttpTest extends TestCase
@@ -138,11 +139,22 @@ class HttpTest extends TestCase
     // retry
     public function testRetry()
     {
-        $response = Http::timeout(2)->retry(5, 1000)->asJson()->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
+        $response = Http::timeout(2)->retry(5, 1000)->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
             'username' => 'rio',
             'password' => '12435',
         ]);
 
         self::assertTrue($response->ok());
+    }
+
+    // throw error
+    public function testThrowError()
+    {
+        $this->assertThrows( function()
+            {
+                $response = Http::get('https://www.rioputi.com/mbut');
+                self::assertEquals(404, $response->status());
+                $response->throw();
+            }, RequestException::class);
     }
 }

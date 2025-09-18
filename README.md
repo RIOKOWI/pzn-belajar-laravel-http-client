@@ -147,3 +147,10 @@ contoh di file :
 
 HttpTest.php
 LINE 138-147
+
+## THROW ERROR
+
+contoh di file :
+
+HttpTest.php
+LINE 150-159
