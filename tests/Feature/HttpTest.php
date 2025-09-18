@@ -100,16 +100,27 @@ class HttpTest extends TestCase
     // }
     
     // multipart
-    public function testMultipart()
+    // public function testMultipart()
+    // {
+    //     $response = Http::asMultipart()
+    //     ->attach('profile', file_get_contents(__DIR__ . '\..\pictures\cafe.png'), 'embut.jpg')
+    //     ->post('https://eop92rn4erpqpm2.m.pipedream.net',[
+    //         'username' => 'rio',
+    //         'password' => '12435',
+    //     ]);
+        
+    //     self::assertTrue($response->ok());
+
+    // }
+
+    //json
+    public function testJson()
     {
-        $response = Http::asMultipart()
-        ->attach('profile', file_get_contents(__DIR__ . '\..\pictures\cafe.png'), 'embut.jpg')
-        ->post('https://eop92rn4erpqpm2.m.pipedream.net',[
+        $response = Http::asJson()->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
             'username' => 'rio',
             'password' => '12435',
         ]);
-        
-        self::assertTrue($response->ok());
 
+        self::assertTrue($response->ok());
     }
 }
