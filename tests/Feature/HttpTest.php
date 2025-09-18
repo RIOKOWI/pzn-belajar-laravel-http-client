@@ -54,4 +54,19 @@ class HttpTest extends TestCase
 
         self::assertTrue($response);
     }
+
+    // header
+    public function testHeader()
+    {
+        $response = Http::withQueryParameters([
+            'page' => 1,
+            'limit' => 10,
+        ])->withHeaders([
+            'Accept' => 'application/json',
+            'X-required-Id' => '123456789',
+        ])
+        ->get('https://eop92rn4erpqpm2.m.pipedream.net');
+
+        self::assertTrue($response);
+    }
 }
