@@ -114,9 +114,20 @@ class HttpTest extends TestCase
     // }
 
     //json
-    public function testJson()
+    // public function testJson()
+    // {
+    //     $response = Http::asJson()->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
+    //         'username' => 'rio',
+    //         'password' => '12435',
+    //     ]);
+
+    //     self::assertTrue($response->ok());
+    // }
+
+    // timeout
+    public function testTimeOut()
     {
-        $response = Http::asJson()->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
+        $response = Http::timeout(2)->asJson()->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
             'username' => 'rio',
             'password' => '12435',
         ]);

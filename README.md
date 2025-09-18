@@ -133,3 +133,10 @@ contoh di file :
 
 HttpTest.php
 LINE 116-125
+
+## TIMEOUT
+
+contoh di file :
+
+HttpTest.php
+LINE 127-136
