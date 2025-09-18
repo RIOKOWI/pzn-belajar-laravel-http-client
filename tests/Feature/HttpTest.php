@@ -125,9 +125,20 @@ class HttpTest extends TestCase
     // }
 
     // timeout
-    public function testTimeOut()
+    // public function testTimeOut()
+    // {
+    //     $response = Http::timeout(2)->asJson()->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
+    //         'username' => 'rio',
+    //         'password' => '12435',
+    //     ]);
+
+    //     self::assertTrue($response->ok());
+    // }
+
+    // retry
+    public function testRetry()
     {
-        $response = Http::timeout(2)->asJson()->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
+        $response = Http::timeout(2)->retry(5, 1000)->asJson()->post('https://eop92rn4erpqpm2.m.pipedream.net' ,[
             'username' => 'rio',
             'password' => '12435',
         ]);
