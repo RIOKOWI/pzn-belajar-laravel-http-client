@@ -105,3 +105,10 @@ contoh di file :
 
 HttpTest.php
 LINE 58-71
+
+## COOKIE
+
+contoh di file :
+
+HttpTest.php
+LINE 73-89
