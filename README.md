@@ -119,3 +119,10 @@ contoh di file :
 
 HttpTest.php
 LINE 91-100
+
+## MULTIPART
+
+contoh di file :
+
+HttpTest.php
+LINE 102-114
